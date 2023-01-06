@@ -173,15 +173,15 @@ function getRandom(arr) {
   var arrayOfCharacterTypes = 
   [lowerCasedCharacters, upperCasedCharacters, 
     numericCharacters, specialCharacters]
-    console.log(arrayOfCharacterTypes)
+
   for(var i = 1; i < arr.length; i++){
       if(arr[i] == true){
         password = password.concat(arrayOfCharacterTypes[i - 1])
       }
   }
-  console.log(password)
+
   var finalpassword = getRandomCharacters(password, length)
-  console.log(finalpassword)
+
   return finalpassword
 }
 
@@ -190,7 +190,7 @@ function getRandomCharacters(arr, length){
   var result = ''
   var characters = arr.join()
   characters = characters.replaceAll(',', '')
-  console.log(characters)
+
   var characterLength = characters.length
   
   for(var i = 0; i < length; i++){
