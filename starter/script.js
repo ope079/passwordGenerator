@@ -92,29 +92,26 @@ var upperCasedCharacters = [
 function getPasswordOptions() {
   var arrayOptions = [] 
   
-  
-
   var passwordL = passwordLength()
   arrayOptions.push(passwordL)
   
+  while(arrayOptions.length < 5 || !arrayOptions.includes(true)){
   
-  while(arrayOptions.length < 5 || !arrayOptions.includes("true")){
-  
-  alert("Must contain at least 1 type of character")
+    alert("Must contain at least 1 type of character")
 
-  var alphaL = alphaLower()
-  arrayOptions.push(alphaL)
+    var alphaL = alphaLower()
+    arrayOptions.push(alphaL)
 
-  var alphaU = alphaUpper()
-  arrayOptions.push(alphaU)
+    var alphaU = alphaUpper()
+    arrayOptions.push(alphaU)
 
-  var numericNum = numeric()
-  arrayOptions.push(numericNum)
+    var numericNum = numeric()
+    arrayOptions.push(numericNum)
 
-  var specialNum = special()
-  arrayOptions.push(specialNum)
-  
-}
+    var specialNum = special()
+    arrayOptions.push(specialNum)
+    
+  }
   return arrayOptions
 }
 
