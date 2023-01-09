@@ -100,17 +100,24 @@ function getPasswordOptions() {
     alert("Must contain at least 1 type of character")
 
     var alphaL = alphaLower()
-    arrayOptions.push(alphaL)
+    arrayOptions.splice(1, 1)
+    arrayOptions.splice(1, 1,alphaL)
+
 
     var alphaU = alphaUpper()
-    arrayOptions.push(alphaU)
+    arrayOptions.splice(2, 1)
+    arrayOptions.splice(2, 1, alphaU)
+
 
     var numericNum = numeric()
-    arrayOptions.push(numericNum)
+    arrayOptions.splice(3, 1)
+    arrayOptions.splice(3, 1, numericNum)
+
 
     var specialNum = special()
-    arrayOptions.push(specialNum)
-    
+    arrayOptions.splice(4, 1)
+    arrayOptions.splice(4, 1, specialNum)
+
   }
   return arrayOptions
 }
